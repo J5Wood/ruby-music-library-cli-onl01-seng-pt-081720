@@ -30,10 +30,10 @@ class Artist
   end
 
   def add_song(song)
-    # if song.artist == nil || !song.artist
-    #   unless song.artist.include?(self)
-    song.artist = self unless song.artist.include?(self)
-    # end
+    if song.artist == nil || !song.artist
+      unless song.artist.include?(self)
+    song.artist = self
+    end
     if !self.songs.include?(song)
       self.songs << song
     end
